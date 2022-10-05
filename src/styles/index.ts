@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import resetCss from "./reset.css";
 
 export default createGlobalStyle`
+
     ${resetCss}
 
     :root {
@@ -20,10 +21,5 @@ export default createGlobalStyle`
     --gray300:#333333;
     --gray600:#848484;
     --gray900:#EFEFEF;
-
-
-
-
-
 
 `;
