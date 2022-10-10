@@ -10,12 +10,12 @@ A proposta do exercício de front-end da **Brainn** é ser simples e divertido.
 
 ## Exercício
 
-O objetivo é construir uma **aplicação web front-end** que mostre os **Resultados das Loterias**.
+O objetivo é construir uma **aplicação web front-end** que mostre os **Resultados das Lottery**.
 
 ### Recursos
 
 - Layout: https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge
-- API: https://brainn-api-loterias.herokuapp.com
+- API: https://brainn-api-lottery.herokuapp.com
 - Tipografia (webfont): [Montserrat](https://fonts.google.com/specimen/Montserrat)
 
 ### Requisitos & Funcionalidades
