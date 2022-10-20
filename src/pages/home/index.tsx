@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import { ReactComponent as LotoLogo } from "../../assets/lotologo.svg";
 import { Select } from "../../components/Select";
+import { Number } from "../../components/Number";
 import { ILottery, ILotteryConcourse } from "../../interfaces";
-import { endpoint } from "../../utils";
-import { Container, InfosContainer, ResultsContainer } from "./styles";
+import { endpoint, formatDate } from "../../utils";
+import {
+  Container,
+  InfosContainer,
+  ResultsContainer,
+  Separator,
+  LogoContainer,
+  DateContainer,
+} from "./styles";
 
 export function Home() {
   const [lotteryData, setLotteryData] = useState<ILottery[]>([]);
@@ -38,26 +46,35 @@ export function Home() {
 
   return (
     <Container>
-      <InfosContainer>
+      <InfosContainer bg={selectedLottery.nome.replaceAll(" ", "")}>
         <Select
           lotteryData={lotteryData}
           selectedLottery={selectedLottery}
           setSelectedLottery={setSelectedLottery}
         />
-        <div>
+        <LogoContainer>
           <LotoLogo />
           <h1>{selectedLottery?.nome.toUpperCase()}</h1>
-        </div>
-        <span>CONCURSO N. {selectedLottery?.concourseId}</span>
-        <span>{selectedLottery?.concourse?.data}</span>
+        </LogoContainer>
+        <DateContainer>
+          <span>CONCURSO N. {selectedLottery?.concourseId}</span>
+          <span>
+            {selectedLottery?.concourse &&
+              formatDate(new Date(selectedLottery.concourse.data))}
+          </span>
+        </DateContainer>
       </InfosContainer>
 
+      <Separator bg={selectedLottery.nome.replaceAll(" ", "")}>
+        <div />
+      </Separator>
+
       <ResultsContainer>
-        <ul>
+        <ol>
           {selectedLottery?.concourse?.numeros.map((number, i) => (
-            <li key={i}>{number}</li>
+            <Number key={i} number={+number} />
           ))}
-        </ul>
+        </ol>
         <p>
           Este sorteio é meramente ilustrativo e não possui nenhuma ligação com
           a CAIXA.

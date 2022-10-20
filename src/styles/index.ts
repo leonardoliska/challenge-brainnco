@@ -7,19 +7,19 @@ export default createGlobalStyle`
 
     :root {
         font-family: 'Montserrat', sans-serif;
+
+        --mega-sena: #6BEFA3;
+        --quina: #8666EF;
+        --lotofácil: #DD7AC6;
+        --lotomania:  #FFAB64;
+        --timemania: #5AAD7D;
+        --diadesorte:#BFAF83;
+
+        --white: #FFFFFF;
+        --black: #000000;
+        --gray300:#333333;
+        --gray600:#848484;
+        --gray900:#EFEFEF;
     }
 
-    --megasena: #6BEFA3;
-    --quina: #8666EF;
-    --lotofacil: #DD7AC6;
-    --lotomania:  #FFAB64;
-    --timemania: #5AAD7D;
-    --diadesorte:#BFAF83;
-
-    --white: #FFFFFF;
-    --black: #000000;
-    --gray300:#333333;
-    --gray600:#848484;
-    --gray900:#EFEFEF;
-/*  */
 `;
